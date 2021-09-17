@@ -1,0 +1,4 @@
+name: Effect
+version: '${project.version}'
+main: io.github.dev7ib.effect.Effect
+api-version: 1.17

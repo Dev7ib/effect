@@ -1,0 +1,8 @@
+basic:
+  no-permission: "&cNo Permission!"
+  only-players: "&cSorry, only players can execute this command."
+  players-offline: "&cThat player is not online!"
+
+fireresistance:
+  enabled: "&eYour FireResistance has been &aEnabled"
+  disable: "&eYour FireResistance has been &cDisabled"

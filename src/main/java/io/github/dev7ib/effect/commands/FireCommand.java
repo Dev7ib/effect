@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+
 /**
  * @author Dev7ib (dev7ib@fusiongames.dev)
  * 9/17/2021 / 1.56 PM
@@ -32,9 +33,9 @@ public class FireCommand implements CommandExecutor {
         if(args.length == 0) {
             if(player.hasPotionEffect(PotionEffectType.FIRE_RESISTANCE)) {
                 player.removePotionEffect(PotionEffectType.FIRE_RESISTANCE);
-                player.sendMessage(CC.color("&cYou no longer have fire resistance"));
+                player.sendMessage(Effect.getInstance().getMessages().getString("fireresistance.disable"));
             } else {
-                player.sendMessage(CC.color("&aYou have fire resistance 2"));
+                player.sendMessage(Effect.getInstance().getMessages().getString("fireresistance.enabled"));
                 player.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Integer.MAX_VALUE ,1));
             }
             return true;
@@ -42,19 +43,17 @@ public class FireCommand implements CommandExecutor {
         if(args.length == 1) {
             Player target = Bukkit.getPlayer(args[0]);
             if(target == null) {
-                for (String playerNull : Effect.getInstance().getMessages().getStringList("PlayerNull")) {
-                    player.sendMessage(CC.color(playerNull));
-                }
+                Effect.getInstance().getMessages().getString("basic.player-offline");
                 return true;
             }
             if(target.hasPotionEffect(PotionEffectType.FIRE_RESISTANCE)) {
                 target.removePotionEffect(PotionEffectType.FIRE_RESISTANCE);
-                target.sendMessage(CC.color("&cYou no longer have fire resistance"));
-                player.sendMessage(CC.color("&cYou've removed " + target.getName() + " &afire resistance"));
+                target.sendMessage(Effect.getInstance().getMessages().getString("fireresistance.disable"));
+                player.sendMessage(CC.color("&eYou've &cDisabled &6" + target.getName() + " &eFire Resistance"));
             } else {
-                target.sendMessage(CC.color("&aYou have been given fire resistance 2 by " + player.getName()));
+                target.sendMessage(Effect.getInstance().getMessages().getString("fireresistance.enabled"));
                 target.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, Integer.MAX_VALUE ,1));
-                player.sendMessage(CC.color("&cYou've given " + target.getName() + " &afire resistance 2"));
+                player.sendMessage(CC.color("&eYou've &aEnabled &6" + target.getName() + " &eFire Resistance "));
             }
         }
         return true;

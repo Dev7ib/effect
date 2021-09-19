@@ -1,4 +1,16 @@
 name: Effect
 version: '${project.version}'
+authors: [ 7ib ]
+description: This core created by AngelMF
+website: https://discord.gg/9hvf8gYGuS
 main: io.github.dev7ib.effect.Effect
-api-version: 1.17
+
+commands:
+  fire:
+  speed:
+  waterbreathing:
+    aliases: [ wb ]
+  strength:
+    aliases: [ str ]
+  invisibility:
+    aliases: [ invis ]

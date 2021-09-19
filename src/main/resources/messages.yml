@@ -6,3 +6,19 @@ basic:
 fireresistance:
   enabled: "&eYour FireResistance has been &aEnabled"
   disable: "&eYour FireResistance has been &cDisabled"
+
+speed:
+  enabled: "&eYour Speed 2 has been &aEnabled"
+  disable: "&eYour Speed 2 has been &cDisabled"
+
+invisibility:
+  enabled: "&eYour invisibility has been &aEnabled"
+  disable: "&eYour invisibility has been &cDisabled"
+
+strength:
+  enabled: "&eYour Strength has been &aEnabled"
+  disable: "&eYour Strength has been &cDisabled"
+
+waterbreathing:
+  enabled: "&eYour Water Breathing has been &aEnabled"
+  disable: "&eYour Water Breathing has been &cDisabled"
